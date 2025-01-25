@@ -26,9 +26,16 @@
             margin-bottom: 20px;
         }
         img {
-            max-width: 90%;
-            height: auto;
+            width: 300px; /* Adjust width */
+            height: auto; /* Maintain aspect ratio */
             border: 2px solid white;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 560px;
+            height: 315px;
+            max-width: 90%;
+            border: none;
         }
     </style>
 </head>
@@ -36,7 +43,14 @@
     <h1>Fuck it, we ball</h1>
     <div id="countdown">Loading...</div>
     <!-- Add your image below -->
-    <img src="whitecoat.jpg" alt="Centered Image">
+    <img src="your-image-url-here.jpg" alt="Centered Image">
+    <!-- Embed YouTube video below -->
+    <iframe 
+        src="https://www.youtube.com/embed/MFNn8itfCZ4" 
+        title="YouTube video player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
 
     <script>
         function updateCountdown() {
