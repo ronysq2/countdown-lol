@@ -26,7 +26,7 @@
             margin-bottom: 20px;
         }
         img {
-            width: 100px;
+            width: 250px;
             height: auto;
             border: 2px solid white;
             margin-bottom: 20px;
@@ -52,12 +52,9 @@
 
     <script>
         function updateCountdown() {
-            // Target date and time: January 29, 2024, 8:00 AM EST
-            const targetDate = new Date("2024-01-29T13:00:00Z"); // This is UTC (8 AM EST)
+            // Target date and time: January 29, 2025, 8:00 AM EST
+            const targetDate = new Date("2025-01-29T13:00:00Z"); // This is UTC (8 AM EST)
             const now = new Date();
-
-            console.log("Target date (UTC):", targetDate); // Log the target date for debugging
-            console.log("Current date (local):", now); // Log the current date for debugging
 
             const difference = targetDate - now;
 
