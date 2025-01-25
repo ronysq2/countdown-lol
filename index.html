@@ -26,8 +26,8 @@
             margin-bottom: 20px;
         }
         img {
-            width: 250px; /* Adjust width */
-            height: auto; /* Maintain aspect ratio */
+            width: 100px;
+            height: auto;
             border: 2px solid white;
             margin-bottom: 20px;
         }
@@ -52,32 +52,31 @@
 
     <script>
         function updateCountdown() {
-            // Set the target date and time in UTC (Coordinated Universal Time)
-            const targetDate = new Date("2024-01-29T13:00:00Z"); // 8 AM EST = 1 PM UTC
-            const now = new Date(); // Current time
+            // Target date and time: January 29, 2024, 8:00 AM EST
+            const targetDate = new Date("2024-01-29T13:00:00Z"); // This is UTC (8 AM EST)
+            const now = new Date();
 
-            // Calculate the difference in milliseconds
+            console.log("Target date (UTC):", targetDate); // Log the target date for debugging
+            console.log("Current date (local):", now); // Log the current date for debugging
+
             const difference = targetDate - now;
 
             if (difference > 0) {
-                // Time calculations for days, hours, minutes, and seconds
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-                // Display the result in the countdown element
                 document.getElementById("countdown").innerHTML = 
                     `${days}d ${hours}h ${minutes}m ${seconds}s`;
             } else {
-                // If the countdown is finished, display this message
                 document.getElementById("countdown").innerHTML = "It's time!";
             }
         }
 
-        // Update the countdown every second
+        // Run the countdown immediately, and then update every second
         setInterval(updateCountdown, 1000);
-        updateCountdown(); // Run it once immediately
+        updateCountdown();
     </script>
 </body>
 </html>
